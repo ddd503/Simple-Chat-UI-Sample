@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatMessageCell" rowHeight="146" id="KGk-i7-Jjw" customClass="ChatMessageCell" customModule="Simple_Chat_UI_Sample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="700" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="700" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fht-Am-qNu">
+                        <rect key="frame" x="10" y="0.0" width="680" height="120"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-RL-L29">
+                                <rect key="frame" x="8" y="2" width="667" height="116"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49711733762391919" green="0.80505953497457305" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xp4-RL-L29" firstAttribute="leading" secondItem="Fht-Am-qNu" secondAttribute="leading" constant="8" id="CFd-gy-eZp"/>
+                            <constraint firstAttribute="bottom" secondItem="xp4-RL-L29" secondAttribute="bottom" constant="2" id="D8p-xu-uwN"/>
+                            <constraint firstAttribute="trailing" secondItem="xp4-RL-L29" secondAttribute="trailing" constant="5" id="OCh-7l-WT2"/>
+                            <constraint firstItem="xp4-RL-L29" firstAttribute="top" secondItem="Fht-Am-qNu" secondAttribute="top" constant="2" id="lQj-wo-aoZ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="送信時間" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-3T-Mzh">
+                        <rect key="frame" x="0.0" y="128" width="690" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eo8-3T-Mzh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="31A-MB-1Vq"/>
+                    <constraint firstAttribute="trailing" secondItem="Fht-Am-qNu" secondAttribute="trailing" constant="10" id="Ipr-vM-ZM2"/>
+                    <constraint firstItem="Fht-Am-qNu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MUc-Iq-ue3"/>
+                    <constraint firstItem="Fht-Am-qNu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ON3-rb-Z0p"/>
+                    <constraint firstItem="eo8-3T-Mzh" firstAttribute="top" secondItem="Fht-Am-qNu" secondAttribute="bottom" constant="8" id="RGh-CQ-kXP"/>
+                    <constraint firstAttribute="bottom" secondItem="eo8-3T-Mzh" secondAttribute="bottom" constant="3" id="tMw-r3-W66"/>
+                    <constraint firstAttribute="trailing" secondItem="eo8-3T-Mzh" secondAttribute="trailing" constant="10" id="xsT-KV-dlY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageBackgroundView" destination="Fht-Am-qNu" id="dNf-DN-gOY"/>
+                <outlet property="messageText" destination="xp4-RL-L29" id="l6T-ee-K4v"/>
+                <outlet property="sendTimeLabel" destination="eo8-3T-Mzh" id="IlG-2E-9cO"/>
+            </connections>
+            <point key="canvasLocation" x="-63" y="108"/>
+        </tableViewCell>
+    </objects>
+</document>
